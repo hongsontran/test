@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+</head>
+
+<body>
+<img src="11_cyrcle_one_24.gif" />
+<input />
+<div id="divDocument"></div>
+
+<button class="openWindow">click</button>
+<script>
+	$(document).ready(function () {
+
+            $(".openWindow").click(function () {
+
+
+
+                setTimeout(function() {
+
+                var divToShow = $("#divDocument");
+
+                var windowWidth = $(window).width();
+                var leftOut = (windowWidth * -1);
+                var leftIn = windowWidth + 500;
+
+                divToShow.css({ left: leftIn });
+                divToShow.show();
+                divToShow.animate({ left: 0 }, 400, function () {
+                    divToShow.addClass("visibleDiv");
+                });
+
+
+            }, 2000);
+
+
+
+                for (var i = 0; i < 10000; i++) {
+					$("input").val(i);
+                    //$("#divDocument").append("<div>hello</div>");
+                } 
+
+
+            });
+
+
+
+        });
+</script>
+</body>
+</html>
